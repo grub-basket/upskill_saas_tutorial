@@ -18,12 +18,19 @@ gem 'jquery-rails', '4.1.1'
 gem 'turbolinks', '5.0.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '2.5.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '3.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '3.1.7'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Use Twitter Bootstrap library for front-end UI and layout
+gem 'bootstrap-sass', '3.3.7'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
@@ -42,6 +49,6 @@ group :production do
   # Use the PostgreSQL gem for Heroku production servers
   gem 'pg', '0.18.4'
 end
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Windows does not inclde zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 ruby '2.3.0'

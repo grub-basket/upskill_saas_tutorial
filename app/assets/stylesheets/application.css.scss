@@ -47,31 +47,31 @@ h1, h2, h3 {
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li >a {
-  color: orange;
+  color: black;
   &:hover {
-    color: orange;
+    color: black;
     opacity: 0.75;
   }
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: orange;
+  background-color: black;
 }
 .navbar-default .navbar-toggle {
-  border: 2px solid orange;
+  border: 2px solid black;
   &:hover, &:focus {
     background-color: #007fff;
   }
 }
 
-//Extra code added so that way the bar formed by clicking on the hamburger menu was orange, too.
+//Extra code added so that way the bar formed by clicking on the hamburger menu was black, too.
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-  border-color: orange;
+  border-color: black;
   }
 
 // Home Page Styles
 .home-callout {
-  color: orange;
+  color: black;
   margin-top: -20px;
   padding-top: 50px;
   padding-bottom: 100px;

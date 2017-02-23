@@ -54,6 +54,21 @@ h1, h2, h3 {
   }
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: orange;
+}
+.navbar-default .navbar-toggle {
+  border: 2px solid orange;
+  &:hover, &:focus {
+    background-color: #007fff;
+  }
+}
+
+//Extra code added so that way the bar formed by clicking on the hamburger menu was orange, too.
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: orange;
+  }
+
 // Home Page Styles
 .home-callout {
   color: orange;

@@ -8,9 +8,11 @@ class ContactsController < ApplicationController
     # @variables are called instance variables | This point to new.html.erb
     # This will create
     if @contact.save
-       redirect_to new_contact_path, notice: "Message sent successfully; thank you."
+      flash[:success] = "Message sent successfully; thank you!"
+       redirect_to new_contact_path
     else
-       redirect_to new_contact_path, notice: "An error has occured - please complete the entire form."
+       flash[:error] = @contact.errors.full_messages.join(", ")
+       redirect_to new_contact_path
     end
   end
   

@@ -8,6 +8,10 @@ class ContactsController < ApplicationController
     # @variables are called instance variables | This point to new.html.erb
     # This will create
     if @contact.save
+      name = params[:contact][:name]
+      email = params[:contact][:email]
+      body = params[:contact][:comments]
+      ContactMailer.contact_email(name, email, body).deliver
       flash[:success] = "Message sent successfully; thank you!"
        redirect_to new_contact_path
     else

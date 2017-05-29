@@ -2,7 +2,7 @@
 //Document Ready.
 $(document).on('turbolinks:load', function(){
   var theForm = $('#pro_form');
-  var submitBtn = $('#form-submit-btn');
+  var submitBtn = $('#form-signup-btn');
 
 //Set Stripe Public Key
 Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
@@ -52,12 +52,9 @@ submitBtn.click(function(event){
       exp_month: expMonth,
       exp_year: expYear
     }, stripeResponseHandler);
-    return false;
     }
+    return false;
 });
-
-
-
 
   //Stripe will return a card token.
   function stripeResponseHandler(status, response) {

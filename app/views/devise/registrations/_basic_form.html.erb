@@ -2,7 +2,7 @@
   <%= devise_error_messages! %>
   
   <%= hidden_field_tag 'plan', params[:plan] %>
-
+  
   <div class="field form-group">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, class: 'form-control' %>
@@ -13,15 +13,15 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "off", class: 'form-control'  %>
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
   </div>
 
   <div class="field form-group">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'  %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
   </div>
 
-  <div class="actions  form-group">
-    <%= f.submit "Sign up", class: 'btn btn-success'  %>
+  <div class="actions form-group">
+    <%= f.submit "Sign up", class: 'btn btn-success' %>
   </div>
 <% end %>

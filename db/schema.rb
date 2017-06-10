@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170511010928) do
+ActiveRecord::Schema.define(version: 20170610222215) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -27,6 +27,18 @@ ActiveRecord::Schema.define(version: 20170511010928) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "profiles", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "job_title"
+    t.string   "phone_number"
+    t.string   "contact_email"
+    t.text     "description"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -40,7 +52,7 @@ ActiveRecord::Schema.define(version: 20170511010928) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.integer  "plain_id"
+    t.integer  "plan_id"
     t.string   "stripe_customer_token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

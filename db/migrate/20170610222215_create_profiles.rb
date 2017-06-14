@@ -5,9 +5,9 @@ class CreateProfiles < ActiveRecord::Migration[5.0]
       t.string :first_name
       t.string :last_name
       t.string :job_title
-      t.string :phone_number #only available for pro members
+      t.string :phone_number #only available for pro accounts
       t.string :contact_email
-      t.text   :description
+      t.text :description
       t.timestamps
     end
   end

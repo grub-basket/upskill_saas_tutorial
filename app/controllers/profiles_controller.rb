@@ -4,13 +4,13 @@ class ProfilesController < ApplicationController
   # Created by us
   before_action :only_current_user
   
-  # GET  to /users/:user_id/profile/new | This creates the profile
+  # GET to /users/:user_id/profile/new | This creates the profile
   def new
     # Render blank profile details form
     @profile = Profile.new
   end
   
-  # POST to /users?:user_id/profile | This updates the profile
+  # POST to /users/:user_id/profile | This updates the profile
   def create
   	# Ensure that we have the user who is filling out form
   	@user = User.find( params[:user_id] )
@@ -40,7 +40,7 @@ class ProfilesController < ApplicationController
     if @profile.update_attributes(profile_params)
       flash[:success] = "Profile updated!"
       # Redirect user to their profile page
-      redirect_to user_path(id: params[:user_id])
+      redirect_to user_path(id: params[:user_id] )
     else
       # If updating the profile fails, redirect the user to where they can edit their profile
       render action: :edit
@@ -53,7 +53,7 @@ class ProfilesController < ApplicationController
   	end
   	
   	def only_current_user
-  	  @User = User.find( params[:user_id] )
+  	  @user = User.find( params[:user_id] )
   	  redirect_to(root_url) unless @user == current_user
   	end
 end
